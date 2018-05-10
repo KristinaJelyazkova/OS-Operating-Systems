@@ -1,0 +1,6 @@
+read message
+for i in $*
+  do if test `who|grep $i|wc -l` -gt 0
+        then echo $message |write $i
+     fi
+  done

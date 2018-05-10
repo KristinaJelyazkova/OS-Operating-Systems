@@ -1,0 +1,11 @@
+x=`ls -l $1/*.txt|wc -l`
+y=`ls -l $2/*.txt|wc -l`
+if test $x -gt $y
+  then read dir
+       mkdir $dir
+fi
+for i in $1/*
+  do if test -f $i -a -r $i -a -w $i -a ! -x $i
+        then mv $i $dir
+     fi
+  done

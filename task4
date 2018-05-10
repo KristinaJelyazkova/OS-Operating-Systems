@@ -1,0 +1,23 @@
+if test $# -lt 3
+  then string=`cat student/ff`
+  else string=$3
+fi
+x=0
+mkdir $string
+for i in *.cpp
+  do mv $i $1
+     x=$((x - 1))
+     echo $i >> $string/names
+  done
+for i in *.out
+  do mv $i $2
+     x=$((x - 1))
+     echo $i >> $string/names
+  done
+for i in *
+  do if test -f $i
+     then x=$((x + 1))
+     fi
+  done
+echo "$x files were not moved."
+

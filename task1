@@ -1,0 +1,8 @@
+if test -d $1
+  then for i in $1/*
+           do if test -f $i -a `wc -c < $i 2> /dev/null` -gt $2
+                 then echo $i
+              fi
+           done
+  else echo "No such directory."
+fi
