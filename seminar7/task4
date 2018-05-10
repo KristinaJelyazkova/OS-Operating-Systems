@@ -1,0 +1,7 @@
+cp $1 copy1
+cp $1 copy2
+cp $1 copy3
+read file
+grep $2 $1 > $file
+grep $2 $1|wc -l >> $file
+mv $file ~/../info

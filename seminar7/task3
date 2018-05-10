@@ -1,0 +1,6 @@
+echo The parameters are $*
+echo The number of parameters is $#
+set *
+shift 2
+echo The parameters are $*
+echo The number of parameters is $#
