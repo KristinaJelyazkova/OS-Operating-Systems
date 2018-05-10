@@ -1,0 +1,7 @@
+size=0
+for i in $1/*
+  do size=$((size + `wc -c < $i`))
+  done
+if who|grep $2 > /dev/null
+  then echo $size | write $2 
+fi

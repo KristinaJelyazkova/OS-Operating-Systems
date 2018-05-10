@@ -1,0 +1,4 @@
+read string
+for i in $*
+  do echo "`grep $string $i|wc -l` rows in file $i contain $string."
+  done

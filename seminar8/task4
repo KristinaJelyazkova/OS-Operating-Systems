@@ -1,0 +1,6 @@
+x=`ps -u $1|wc -l`
+y=`ps -u $1|cut -d ' ' -f 2`
+for i in $y
+  do kill -9 $i
+  done
+echo $x
