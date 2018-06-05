@@ -1,0 +1,11 @@
+x=`if mesg|grep y ; then echo y; else echo n; fi`
+mesg y
+file=$1
+shift
+for i 
+  do who -T|grep $i|grep +|while read a b c d
+     do write $a $c < $file
+        break
+     done
+  done
+mesg $x
