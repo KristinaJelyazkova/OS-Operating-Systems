@@ -1,5 +1,0 @@
-cd $1
-for i in *.c
-  do obj=${i%.c}.exe
-     g++ -o $obj $i &
-  done
