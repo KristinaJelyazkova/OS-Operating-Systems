@@ -1,0 +1,19 @@
+x=0
+names=""
+for i in $1/*
+  do if file $i|grep "C source" >/dev/null
+        then x=$(($x + 1))
+             names="$names $i"
+     fi
+  done
+for i in $2/*
+  do if file $i|grep "C source" >/dev/null
+        then x=$(($x + 1))
+             names="$names $i"
+     fi
+  done
+if test $x -gt 10
+  then echo $names > allNames
+       chmod 0444 allNames
+  else echo "There are $x c files in $1 and $2" 
+fi 

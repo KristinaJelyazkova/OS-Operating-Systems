@@ -1,0 +1,12 @@
+x=0
+y=0
+for i in $1/a*
+  do x=$(($x + 1))
+  done
+for i in $1/*.c
+  do y=$(($y + 1))
+  done
+echo "$x files in directory $1 start with a"
+echo "$y files in directory $1 end with .c"
+z=$(($x + $y))
+echo "The sum of these files is $z"

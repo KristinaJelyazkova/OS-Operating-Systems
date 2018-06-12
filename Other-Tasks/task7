@@ -1,0 +1,11 @@
+if test ! -d ~krisi/$1
+  then mkdir ~krisi/$1
+fi
+x=0
+for i in *
+  do if test -f $i -a -r $i
+        then cp $i ~krisi/$1
+        else x=$((x + 1))
+     fi
+  done
+echo $x

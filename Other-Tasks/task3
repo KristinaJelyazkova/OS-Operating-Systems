@@ -1,0 +1,14 @@
+all=`ls -l $1|wc -l`
+x=0
+y=0
+for i in $1/*
+  do if test -f $i
+      then x=$(($x + 1))
+     fi 
+  done
+for i in $1/*
+  do if test -d $i
+      then y=$(($y + 1))
+     fi 
+  done
+echo "$all $x $y"

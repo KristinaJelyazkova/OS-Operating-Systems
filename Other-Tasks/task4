@@ -1,0 +1,3 @@
+if who|grep $1
+  then echo "Please logout"|write $1
+fi
