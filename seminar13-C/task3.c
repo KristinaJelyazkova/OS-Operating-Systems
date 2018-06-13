@@ -24,6 +24,6 @@ int main(int argc, char *argv[]){
 	}
 	else{
 		int fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-		write(fd, argv[2], sizeof(argv[2]) - 1);
+		write(fd, argv[2], strlen(argv[2]));
 	}
 }
